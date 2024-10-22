@@ -4,7 +4,7 @@ const goalsContainer = document.getElementById("goals-container");
 const completedCount = document.getElementById("completed-count");
 const totalGoals = document.getElementById("total-goals");
 
-let goals = JSON.parse(localStorage.getItem('goals')) || []; // Load from localStorage
+let data = JSON.parse(localStorage.getItem('data')) || []; // Load from localStorage
 
 // Load today's date
 document.getElementById('date').innerText = new Date().toLocaleDateString();
@@ -31,4 +31,4 @@ function updateGoalList() {
 
 function toggleComplete(index) {
     goals[index].completed = !goals[index].completed;
-   
+}
